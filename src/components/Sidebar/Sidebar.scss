@@ -1,0 +1,59 @@
+@import '../../variables';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--background-secondary);
+  padding: 24px;
+  overflow-y: scroll;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-title {
+      color: var(--text-title);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    img {
+      width: 32px;
+    }
+  }
+
+  .search {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+    position: relative;
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 12px 12px 48px;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 16px;
+      bottom: 0;
+      margin: auto 0;
+      font-size: 18px;
+      color: var(--text-body);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    flex: 0.4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sidebar {
+    flex: 0.2;
+  }
+}
